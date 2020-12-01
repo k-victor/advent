@@ -1,7 +1,7 @@
 function productOfTermsInSumOf2020(numberOfTerms, numbers) {
   return numbers
     .flatMap((number, index) => getPermutations([number], tailFromIndex(numbers, index + 1), numberOfTerms))
-    .reduce((previousValue, permutation) => sumOfList(permutation) === 2020 ? productOfList(permutation) : previousValue, null)
+    .reduce((previousValue, permutation) => sumOfList(permutation) === 2020 ? productOfList(permutation) : previousValue, null);
 }
 
 const getPermutations = (head, tail, numberOfTerms) =>
